@@ -1,48 +1,45 @@
-# Gonullu uygulamasi
+# Gönüllü App
 
-Gonullu uygulamasi, LupuS dağıtımının paketlerini derlemek üzere hazırlanmıştır.
-Uygulama, docker imajlarını kullanarak, derleme sisteminin kuyruğundan bekleyen paketleri
-pisi paketi haline getirir ve derleme sistemine gönderir.
+The Gönüllü application is designed to compile packages for the LupuS distribution. Using Docker images, the application converts packages waiting in the build system queue into pisi packages and sends them to the build system.
 
-Bu uygulamayi kullanmak için LupuS kullanmaniz şart değildir. Docker destekleyen
-herhangi bir linux dağıtımınıda da kullanıyor olabilirsiniz.
+You do not need to use LupuS to use this application. You can use any Linux distribution that supports Docker.
 
-## Kullanim
+## USE:
 
-Uygulamayı sisteminize indirmek için
+To download the application to your system
 
   	   git clone https://github.com/TeknoAnka/GONULLU.git
   	   cd gonullu
   	   sudo python3 setup.py install
   	   
-ya da
+OR
 
   	   sudo pip3 install git+https://github.com/TeknoAnka/GONULLU.git
   	   
-Uygulamayı güncellemek için
+To update the application
 
   	   sudo pip3 install git+https://github.com/TeknoAnka/GONULLU.git --upgrade
 
-Uygulamaya verilebilecek parametreleri gormek icin:
+To see the parameters that can be given to the application:
 
   	   gonullu -k
 
-ya da
+OR
 
 	   gonullu --kullanim
 
-Parametre vermeden kullanırsanız 1 adet cpu ve hafızanın %50'sini kullanacak şekilde ayarlanmistir. 
+If used without specifying any parameters, it is configured to use 1 CPU and 50% of the memory.
 
-## Parametreler
+## Parameters:
 
-* -k veya --kullanim:
-Yazılımın kullanımı ile ilgili bilgi içerir
+* -k OR --kullanim:
+Contains information about the use of the software.
 
-* -m veya --memory
-Docker tarafından kullanılacak fiziksel ramin limiti
+* -m OR --memory
+The limit of physical RAM that can be used by Docker.
 
-* -c veya --cpu
-Docker tarafından kullanılmak üzere ayarlanacak cpu sayısı
+* -c OR --cpu
+Number of CPUs to be allocated for use by Docker
 
-* -e veya --email:
-Mail adresiniz
+* -e OR --email:
+Mail address
