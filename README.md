@@ -22,20 +22,24 @@ To update the application:
 
 To see the parameters that can be given to the application:
 
-  	   gonullu -k OR gonullu --kullanim
+  	   gonullu -k
+
+OR
+       
+       gonullu --kullanim
 
 If used without specifying any parameters, it is configured to use 1 CPU and 50% of the memory.
 
 ## Parameters:
 
-* -k / --kullanim:
+* -k OR --kullanim:
 Contains information about the use of the software.
 
-* -m / --memory
+* -m OR --memory
 The limit of physical RAM that can be used by Docker.
 
-* -c / --cpu
+* -c OR --cpu
 Number of CPUs to be allocated for use by Docker
 
-* -e / --email:
+* -e OR --email:
 Mail address
